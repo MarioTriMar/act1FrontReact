@@ -2,17 +2,21 @@
 import React, { useContext } from 'react';
 import {Link, useParams} from 'react-router-dom';
 import {BookContext} from '../context/BookContext';
+import {ShopCartContext} from "../context/ShopCartContext";
 
 export const BookDetails = () => {
     const { bookId } = useParams();
     const { books } = useContext(BookContext);
+    const {addToCart} = useContext(ShopCartContext);
     const book = books.find(b => b.id === bookId);
 
     if (!book) {
         return <h2>Libro no encontrado</h2>;
     }
 
-    console.log(book);
+    const handleAddToCart = () => {
+        addToCart(book);
+    };
 
     return (
         <div className="book-details">
@@ -25,7 +29,8 @@ export const BookDetails = () => {
                 <h2>Precio: {book.price} €</h2>
                 <h2>Stock: {book.stock}</h2>
             </div>
-            <button className="add-button">Añadir al carrito</button>
+            <button className="add-button" onClick={handleAddToCart}>
+                Añadir al carrito</button>
 
 
         </div>

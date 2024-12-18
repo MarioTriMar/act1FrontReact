@@ -1,16 +1,22 @@
 .header-class{
-    height: 70px;
+    height: 150px;
     width: 100%;
-
-    background-color: #272727;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4c4a4b;
 
 }
+
 
 .header-text{
     padding: 10px;
+    margin: 0;
+    flex: 1;
     text-align: center;
     color: #e2e8f0;
 }
+
 .footer{
     border: #0a0f0d 1px solid;
     margin: auto;
@@ -164,4 +170,107 @@
     margin-top: 50px;
     margin-bottom: 50px;
     height: 90px;
+}
+
+
+
+
+/* Estilo del sidebar */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -1000px; /* Oculto inicialmente */
+    width: 300px;
+    height: 1000px;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    border: #61dafb 4px solid;
+    padding: 20px;
+    z-index: 1000;
+
+}
+
+/* Clase cuando el carrito está abierto */
+.cart-sidebar.open {
+    right: 0; /* Muestra el carrito */
+    height: 1500px;
+    width: 470px;
+    margin-top: 180px;
+    margin-right: 20px;
+}
+
+/* Botón y otros estilos */
+.cart-sidebar h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.cart-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart-sidebar li {
+    margin: 10px 0;
+}
+
+.clearCart-button {
+    background-color: #880002;
+    font-size: 25px;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.h1-cart{
+    text-align: center;
+}
+
+.li-cart{
+    font-size: 30px;
+}
+
+.li-cart-total{
+    font-size: 30px;
+    margin-top: 20px;
+
+    text-align: center;
+}
+
+.buyCart-button{
+    background-color: #008820;
+    font-size: 25px;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+
+}
+
+.cart-buttons{
+    display: flex;
+    justify-content: space-between ;
+}
+
+.clearBook-button{
+    font-size: 25px;
+}
+.icon-focus{
+    transition: transform 0.3s ease;
+}
+.icon-focus:hover{
+    transform: scale(1.8);
+
+}
+
+.icon-delete{
+    transition: transform 0.3s ease;
+}
+.icon-delete:hover{
+    transform: scale(1.5);
+
 }

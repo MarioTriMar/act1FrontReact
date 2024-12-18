@@ -1,6 +1,6 @@
 import React from 'react';
 import {Landing} from '../views/Landing';
-
+import {CartProvider} from "../context/ShopCartContext";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {Books} from "../views/Books";
 import {Header} from "../components/Header";
@@ -22,8 +22,11 @@ export const GlobalRouter = () => {
 
 const Layout = ({children}) => (
     <>
-        <Header />
-        {children}
+        <CartProvider>
+            <Header />
+            {children}
+        </CartProvider>
+
     </>
 );
 
