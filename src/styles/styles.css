@@ -1,0 +1,167 @@
+.header-class{
+    height: 70px;
+    width: 100%;
+
+    background-color: #272727;
+
+}
+
+.header-text{
+    padding: 10px;
+    text-align: center;
+    color: #e2e8f0;
+}
+.footer{
+    border: #0a0f0d 1px solid;
+    margin: auto;
+
+    background-color: #837b78;
+}
+
+.card-text{
+    text-align: center;
+}
+
+.landing{
+    height: 1400px;
+
+}
+
+.body-app {
+    height: 90%;
+    margin-top: -22px;
+    font:message-box;
+    background-color: #c4bcb9;
+
+}
+
+.text-landing{
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+.image-landing{
+    height: 200px;
+}
+
+.card {
+    background-color: #fcfff5;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    color: #0a0f0d;
+    height: 680px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+.card img {
+    transition: transform 0.5s ease-in-out, width 0.3s ease, height 0.3s ease;
+    height: 370px;
+    width: 220px;
+
+}
+
+.card img:hover {
+    position: absolute;
+    transform: scale(2);
+}
+
+.card-details{
+    display: flex;
+
+}
+
+.card-details *{
+    margin: 20px;
+}
+
+.card button{
+    margin: auto;
+    margin-top: 20px;
+
+    height: 100px;
+    width: 100px;
+    font-size: 20px;
+}
+
+.div-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.div-books{
+    height: 1630px;
+}
+
+.add-button{
+    border-radius: 14px;
+    background-color: #82ff78;
+}
+
+.div-search{
+    height: 60px;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+
+.div-search *{
+    margin: 10px;
+    font-size: 2em;
+    border-radius: 15px;
+}
+
+.landing-view{
+    height: 1660px;
+
+}
+.book-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 70%;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    color: #343a40;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 1550px;
+}
+
+.book-details img{
+    height: 800px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.book-details h1{
+    font-size: 60px;
+}
+.book-details h2{
+    font-size: 30px;
+}
+.book-details button{
+    font-size: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 90px;
+}
