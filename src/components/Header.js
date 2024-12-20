@@ -3,10 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCartShopping, faHouse, faMinus} from '@fortawesome/free-solid-svg-icons';
 import {ShopCartContext} from "../context/ShopCartContext";
 import {Link} from "react-router-dom";
+import { useNavigate} from 'react-router-dom';
 
 export const Header = () => {
     const [isCartOpen, setIsCartOpen] = useState(false);
     const {cart, clearCart, removeFromCart} = useContext(ShopCartContext);
+    const navigate = useNavigate();
 
     const totalPrice = cart.reduce((total, item) => total + item.price, 0).toFixed(2);
 
@@ -20,6 +22,13 @@ export const Header = () => {
         removeFromCart(bookId); // Elimina un libro del carrito
     };
 
+    const checkOut = () =>{
+        if(cart.length === 0){
+            alert("No hay articulos en el carrito");
+        }else{
+            navigate("/checkout");
+        }
+    }
     return (
         <>
             <header className="header-class">
@@ -56,8 +65,7 @@ export const Header = () => {
                 </ul>
                 <div className="cart-buttons">
                     <button className="clearCart-button" onClick={clearCart}>Limpiar carrito</button>
-                    <Link to={`/checkout`}>
-                        <button className="buyCart-button">Comprar</button></Link>
+                    <button onClick={checkOut} className="buyCart-button">Comprar</button>
                 </div>
 
             </div>

@@ -6,12 +6,17 @@ import {ShopCartContext} from "../context/ShopCartContext";
 export const PayForm = () => {
     const navigate = useNavigate();
 
-    const {clearCart} = useContext(ShopCartContext);
+    const {cart, clearCart} = useContext(ShopCartContext);
 
     const payCart = () => {
-        alert("Compra realizada! Gracias!");
-        clearCart();
-        navigate("/books");
+        if(cart.isEmpty){
+            alert("No hay ningún articulo en el carrito");
+        }else{
+            alert("Compra realizada! Gracias!");
+            clearCart();
+            navigate("/books");
+        }
+
 
     }
 
