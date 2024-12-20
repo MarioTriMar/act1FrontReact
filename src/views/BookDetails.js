@@ -20,14 +20,14 @@ export const BookDetails = () => {
 
     return (
         <div className="book-details">
-            <h1>{book.title}</h1>
-            <h2>Autor: {book.author}</h2>
-            <h2>Género: {book.genre}</h2>
-            <h2>{book.description}</h2>
+            <h2>{book.title}</h2>
+            <p>Autor: {book.author}</p>
+            <p>Género: {book.genre}</p>
+            <p>{book.description}</p>
             <img src={book.image} alt="image"/>
             <div className="card-details">
-                <h2>Precio: {book.price} €</h2>
-                <h2>Stock: {book.stock}</h2>
+                <p>Precio: {book.price} €</p>
+                <p>Stock: {book.stock}</p>
             </div>
             <button className="add-button" onClick={handleAddToCart}>
                 Añadir al carrito</button>
