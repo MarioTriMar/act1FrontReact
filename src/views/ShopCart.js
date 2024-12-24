@@ -5,7 +5,7 @@ import {PayForm} from "../components/PayForm";
 
 export const ShopCart = () => {
 
-    const {cart} = useContext(ShopCartContext);
+    const {cart, removeFromCart} = useContext(ShopCartContext);
     const totalPrice = cart.reduce((total, item) => total + item.price, 0).toFixed(2);
 
     return (
@@ -16,7 +16,7 @@ export const ShopCart = () => {
             <div className="div-card-checkout">
                 {cart
                     .map((book, index) => (
-                        <BookCheckout key={index} book={book}/>
+                        <BookCheckout key={index} book={book} removeFromCart={removeFromCart} />
                     ))}
             </div>
 

@@ -1,12 +1,9 @@
-import React, {useContext} from "react";
+import React from "react";
 import {faMinus} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {ShopCartContext} from "../context/ShopCartContext";
 
 
-export const BookCheckout = ({ book }) => {
-
-    const { removeFromCart} = useContext(ShopCartContext);
+export const BookCheckout = ({ book, removeFromCart }) => {
 
 
     const handleRemoveFromCart = (bookId) => {

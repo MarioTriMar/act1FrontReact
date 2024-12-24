@@ -16,6 +16,7 @@ export const BookDetails = () => {
 
     const handleAddToCart = () => {
         addToCart(book);
+        alert(book.title + " añadido al carrito.");
     };
 
     return (
