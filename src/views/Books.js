@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import '../styles/styles.css'
 import {BookContext} from "../context/BookContext";
 import {Book} from "../components/Book";
@@ -6,7 +6,10 @@ import {SearchBook} from "../components/SearchBook";
 
 export const Books = () => {
     const { books } = useContext(BookContext);
-    const [filteredBooks, setFilteredBooks] = useState(books);
+    const [filteredBooks, setFilteredBooks] = useState([]);
+    useEffect(() => {
+        setFilteredBooks(books);
+    },[books]);
 
     const handleSearch = (searchTerm) => {
         if(searchTerm === "") {
@@ -28,13 +31,22 @@ export const Books = () => {
 
     return (
         <div className="div-books">
-            <SearchBook onSearch={handleSearch} /> {/* Pasamos la función handleSearch */}
+            <SearchBook onSearch={handleSearch} />
             <div className="div-cards">
-                {filteredBooks
-                    .filter((book) => book.stock>0)
-                    .map((book, index) => (
-                    <Book key={index} book={book} />
-                ))}
+                {
+                    filteredBooks.length > 0 ? (
+                        filteredBooks
+                            .filter((book) => book.stock>0)
+                            .map((book, index) => (
+                                <Book key={index} book={book} />
+                            ))
+                    ): (
+                        <h1>Cargando libros...</h1>
+                    )
+
+
+                }
+                {}
             </div>
         </div>
     );

@@ -119,7 +119,7 @@ export const useBooks = () => {
 
 
             ]);
-        }, 2500);
+        }, 1500);
     }, []);
 
     return books;
