@@ -13,7 +13,7 @@ export const ShopCart = () => {
             <PayForm/>
             <h2>Precio total: {totalPrice}</h2>
 
-            <div className="div-card-checkout">
+            <div className="checkout__card-checkout">
                 {cart
                     .map((book, index) => (
                         <BookCheckout key={index} book={book} removeFromCart={removeFromCart} />

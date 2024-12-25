@@ -30,9 +30,9 @@ export const Books = () => {
     };
 
     return (
-        <div className="div-books">
+        <div className="books">
             <SearchBook onSearch={handleSearch} />
-            <div className="div-cards">
+            <div className="books__cards">
                 {
                     filteredBooks.length > 0 ? (
                         filteredBooks

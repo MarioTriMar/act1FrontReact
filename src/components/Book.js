@@ -11,12 +11,12 @@ export const Book = ({ book }) => {
             <p>Género: {book.genre}</p>
 
             <img src={book.image}  alt="image"/>
-            <div className="card-details">
+            <div className="card__details">
                 <p>Precio: {book.price}</p>
                 <p>Stock: {book.stock}</p>
             </div>
             <Link to={`/books/${book.id}`}>
-                <button className="add-button">Ver detalles</button>
+                <button className="card__add-button">Ver detalles</button>
 
             </Link>
         </div>

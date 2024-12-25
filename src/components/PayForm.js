@@ -28,7 +28,7 @@ export const PayForm = () => {
                 <p>Caducidad de tarjeta: <input type="month" name="caducidad"/></p>
                 <p>CVV: <input type="number" name="cvv"/></p>
             </form>
-            <button onClick={payCart} className="submit-button" type="submit" value="Pagar">Pagar</button>
+            <button onClick={payCart} className="form-pay__submit-button" type="submit" value="Pagar">Pagar</button>
 
         </div>
     )

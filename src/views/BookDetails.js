@@ -26,11 +26,11 @@ export const BookDetails = () => {
             <p>Género: {book.genre}</p>
             <p>{book.description}</p>
             <img src={book.image} alt="image"/>
-            <div className="card-details">
+            <div className="book-details__card-details">
                 <p>Precio: {book.price} €</p>
                 <p>Stock: {book.stock}</p>
             </div>
-            <button className="add-button" onClick={handleAddToCart}>
+            <button className="book-details__add-button" onClick={handleAddToCart}>
                 Añadir al carrito</button>
 
 

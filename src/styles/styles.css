@@ -1,38 +1,6 @@
-.header-class{
-    height: 90px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #4c4a4b;
-
-}
-
-
-.header-text{
-    padding: 10px;
-    margin-top: 37px;
-    flex: 1;
-    text-align: center;
-    color: #e2e8f0;
-}
-
-.footer{
-    border: #0a0f0d 1px solid;
-
-    height: 90px;
-    background-color: #837b78;
-}
-
-.card-text{
-    text-align: center;
-}
-
-.landing{
-    height: 1400px;
-
-}
-
+/*
+App.js styles
+ */
 .body-app {
     height: 90%;
     margin-top: -22px;
@@ -41,94 +9,69 @@
 
 }
 
-.text-landing{
-    text-align: center;
-    padding-top: 30px;
-
-}
-
-.image-landing{
-    height: 200px;
-}
-
-.card {
-    background-color: #fcfff5;
-    border: 1px solid #444;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 20px;
-    color: #0a0f0d;
-    height: 350px;
-    width: 200px;
+/*
+ShopCart.js styles
+ */
+.checkout {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-
-    position: relative;
-    overflow: hidden;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 70%;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    color: #343a40;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 700px;
 }
 
-
-.card img {
-    transition: transform 0.5s ease-in-out, width 0.3s ease, height 0.3s ease;
-    height: 200px;
-    width: 120px;
-
-}
-
-.card img:hover {
-    position: absolute;
-    transform: scale(2);
-}
-
-.card-details{
+.checkout__card-checkout{
     display: flex;
-
-}
-.card *{
-    margin: 2px;
-}
-.card-details *{
-    margin-top: 10px;
-    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 
+/*
+Landing.js styles
+ */
+.landing-view{
+    height: 820px;
+}
 
-.div-cards{
+.landing-view__text-landing{
+    text-align: center;
+    padding-top: 30px;
+}
+
+/*
+Books.js styles
+ */
+
+.books__cards{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
 }
 
-.div-books{
+.books{
     min-height: 741px;
 }
 
 
-.div-search{
-    height: 60px;
+/*
+BookDetails.js styles
+ */
+
+.book-details__card__details *{
     margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-
+    padding: 10px;
 }
 
-.div-search *{
-    margin: 10px;
-    font-size: 20px;
-    border-radius: 15px;
-}
-
-.landing-view{
-    height: 820px;
-
-}
 .book-details {
     display: flex;
     flex-direction: column;
@@ -165,10 +108,68 @@
     height: 40px;
 }
 
+.book-details__add-button{
+    border-radius: 14px;
+    background-color: #82ff78;
+}
 
+/*
+SearchBook.js styles
+ */
 
+.div-search{
+    height: 60px;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-/* Estilo del sidebar */
+.div-search *{
+    margin: 10px;
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+/*
+PayForm.js styles
+ */
+
+.form-pay *{
+    font-size: 20px;
+}
+
+.form-pay__submit-button{
+    border-radius: 15px;
+    background-color: #008820;
+}
+
+/*
+Header.js styles
+ */
+
+.header{
+    height: 90px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4c4a4b;
+
+}
+.header__text{
+    padding: 10px;
+    margin-top: 37px;
+    flex: 1;
+    text-align: center;
+    color: #e2e8f0;
+}
+.header__icon-focus{
+    transition: transform 0.3s ease;
+}
+.header__icon-focus:hover{
+    transform: scale(1.8);
+}
 .cart-sidebar {
     position: fixed;
     top: 0;
@@ -207,19 +208,6 @@
 .cart-sidebar li {
     margin: 10px 0;
 }
-
-.clearCart-button {
-    background-color: #880002;
-    font-size: 14px;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-
-
 .li-cart{
     font-size: 18px;
     display: flex;
@@ -230,9 +218,27 @@
 
 .li-cart-total{
     font-size: 20px;
-
-
     text-align: center;
+}
+.icon-delete{
+    transition: transform 0.3s ease;
+    margin-left: 40px;
+}
+.icon-delete:hover{
+    transform: scale(1.5);
+}
+.cart-buttons{
+    display: flex;
+    justify-content: space-between ;
+}
+.clearCart-button {
+    background-color: #880002;
+    font-size: 14px;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
 }
 
 .buyCart-button{
@@ -245,55 +251,24 @@
     margin-top: 20px;
 
 }
+/*
+Footer.js styles
+ */
 
-.cart-buttons{
-    display: flex;
-    justify-content: space-between ;
+.footer{
+    border: #0a0f0d 1px solid;
+
+    height: 90px;
+    background-color: #837b78;
 }
 
-.clearBook-button{
-    font-size: 14px;
-}
-.icon-focus{
-    transition: transform 0.3s ease;
-}
-.icon-focus:hover{
-    transform: scale(1.8);
-
-}
-
-.icon-delete{
-    transition: transform 0.3s ease;
-    margin-left: 40px;
-
-}
-.icon-delete:hover{
-    transform: scale(1.5);
-
-}
-
-.checkout {
-    display: flex;
-    flex-direction: column;
+.footer__card-text{
     text-align: center;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 20px;
-    width: 70%;
-    border-radius: 10px;
-    background-color: #f8f9fa;
-    color: #343a40;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    min-height: 700px;
 }
 
-.div-card-checkout{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
+/*
+BookCheckout.js styles
+ */
 .cart-checkout {
     background-color: #fcfff5;
     border: 1px solid #444;
@@ -316,32 +291,69 @@
 .cart-checkout img {
     height: 200px;
     width: 120px;
+}
+.cart-checkout__card-details *{
+    margin-top: 10px;
+    padding: 10px;
+}
+.cart-checkout__card-details{
+    display: flex;
+}
+.cart-checkout__icon{
 
+    transition: transform 0.3s ease;
+}
+.cart-checkout__icon:hover{
+    transform: scale(1.5);
+}
+
+/*
+Book.js styles
+ */
+.card {
+    background-color: #fcfff5;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    color: #0a0f0d;
+    height: 350px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
 }
 
 
+.card img {
+    transition: transform 0.5s ease-in-out, width 0.3s ease, height 0.3s ease;
+    height: 200px;
+    width: 120px;
 
-.add-button{
+}
+
+.card img:hover {
+    position: absolute;
+    transform: scale(2);
+}
+
+.card__details{
+    display: flex;
+
+}
+.card *{
+    margin: 2px;
+}
+.card__details *{
+    margin-top: 10px;
+    padding: 10px;
+}
+.card__add-button{
     border-radius: 14px;
     background-color: #82ff78;
 }
-
-.icon-delete-checkout{
-    transition: transform 0.3s ease;
-}
-.icon-delete-checkout:hover{
-    transform: scale(1.5);
-
-}
-
-.form-pay *{
-    font-size: 20px;
-}
-
-.submit-button{
-    border-radius: 15px;
-    background-color: #008820;
-}
-
-
-

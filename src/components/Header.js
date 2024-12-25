@@ -31,14 +31,14 @@ export const Header = () => {
     }
     return (
         <>
-            <header className="header-class">
+            <header className="header">
                 <Link to={`/books`}>
-                        <FontAwesomeIcon className="icon-focus" icon={faHouse} style={{color: "#74C0FC", height: 30, width: 60,marginTop:14,  marginLeft: 30}}
+                        <FontAwesomeIcon className="header__icon-focus" icon={faHouse} style={{color: "#74C0FC", height: 30, width: 60,marginTop:14,  marginLeft: 30}}
                     title="Volver a la página principal"/>
                     </Link>
-                <h2 className="header-text">Relatos de Papel</h2>
+                <h2 className="header__text">Relatos de Papel</h2>
 
-                <FontAwesomeIcon className="icon-focus" icon={faCartShopping}
+                <FontAwesomeIcon className="header__icon-focus" icon={faCartShopping}
                                          style={{color: "#63E6BE", height: 30, width: 60, marginRight: 30, marginTop:14}}
                                          onClick={toggleCart} title="Ver carrito"/>
 

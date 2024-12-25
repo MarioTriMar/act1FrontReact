@@ -9,7 +9,7 @@ export const Landing = () => {
     return (
         <div className="landing-view">
             <Link to={"/books"}>
-                <h1 className="text-landing">Bienvenidos a Relatos de Papel</h1>
+                <h1 className="landing-view__text-landing">Bienvenidos a Relatos de Papel</h1>
             </Link>
             <Loader />
 
